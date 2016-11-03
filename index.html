@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--
+
+Ronald Manganaro(c) copyright 2016
+Email: ronald_manganaro@student.uml.edu
+COMP 3010 - 201 GUI Programming I
+Assignment 6
+Ronald Manganaro, Umass Lowell Computer Science
+Date: November 3, 2016
+
+Description: Since this assingment is more about javascript
+I made a very simple format that allows more room for the
+chart to grow larger for larger inputs. I have a header that
+includes the css/html validation buttons. The forms are all
+inside the form div section. The forms allow only number input
+otherwise there will be an error. 
+
+-->
+<html lang="en">
+
+  <head>
+    <title>RFManganaro's Times Tables</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+  </head>
+
+  <body>
+    <!-- Header includes the validation buttons -->
+    <header>
+      <h1>
+        <a href="http://validator.w3.org/check?uri=referer">
+          <img class="validator"
+			         src="http://www.w3.org/Icons/valid-html20"
+					     alt="http://www.w3.org/Icons/valid-html20">
+        </a>Welcome to Ronald Manganaro's Table Generator!
+        <a href="http://jigsaw.w3.org/css-validator/check/referer">
+          <img class="validator" src="http://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!" />
+        </a>
+      </h1>
+      <hr>
+    </header>
+
+    <!-- This div holds all my forms/generate button --> 
+    <div id="formarea">
+      <form name="numbersForm">
+        Horizontal Start: 1.
+			  <input class="numbersONLY" type="number" name="firstInput">
+        Horizontal End: 2.
+			  <input class="numbersONLY"type="number" name="secondInput">
+        Vertical Start: 3.
+			  <input class="numbersONLY" type="number" name="thirdInput">
+        Vertical End: 4.
+			  <input class="numbersONLY" type="number" name="fourthInput">
+        <input id="createBtn" type="button" onclick="validate();" value="Generate">
+        
+        <!-- Quick warning that large tables take time to create -->
+        <p>Please do not enter ranges with > 200 numbers! <p>
+      </form>
+    </div>
+
+		<!-- location of my dynamic table -->
+	  <div id="tableDiv">
+		  <table id="theTable"></table>
+	  </div>
+
+    <!-- This is the js file that hold createTable, deleteTable, and validate -->
+    <script type="text/javascript" src="js/Table.js"></script>
+  </body>
+
+</html>

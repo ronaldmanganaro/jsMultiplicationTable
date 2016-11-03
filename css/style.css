@@ -1,0 +1,63 @@
+/*
+Ronald Manganaro(c) copyright 2016
+Email: ronald_manganaro@student.uml.edu
+COMP 3010 - 201 GUI Programming I
+Assignment 6
+Ronald Manganaro, Umass Lowell Computer Science
+Date: November 3, 2016
+
+Description: Very simple css to make sure
+that there is plenty of room for the chart.
+I used :nth-child() to change the way each 
+row looks. I also have different colors
+for each side of the borders, which I thought
+made it look slightly raised.
+
+*/
+h1 {
+  text-align: center;
+}
+
+div#formarea {
+    float:left;
+}
+
+body {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: powderblue;
+}
+
+/* center the warning in the middle of the page */
+p {
+    text-align: center;
+}
+
+table, td{
+    margin-left: auto;
+    margin-right:auto;
+    color: yellow;
+    border: solid;
+    /* my quad color border */
+    border-color: red green blue yellow;
+}
+
+/* each odd row will be red */
+tr:nth-child(odd) {
+    background: red;
+}
+
+/* each even row is blue*/
+tr:nth-child(even) {
+    background: blue;
+}
+
+/* Footer was deleted to not take up screen space */
+
+/* moved style from validator to here */
+img.validator {
+    border:0;
+    width:88px;
+    height:31px;
+}
